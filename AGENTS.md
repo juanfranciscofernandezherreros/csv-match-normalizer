@@ -30,6 +30,8 @@ No se puede escribir, commitear ni pushear directamente a `main`.
 
 Tras cada cambio, el agente debe completar sin pedir confirmaciones intermedias: commit, push, creación o actualización de la Pull Request, comprobación de los checks del SHA actual, merge automático cuando todos los checks requeridos estén en verde y eliminación de la rama origen. Solo debe detener el merge si GitHub informa de una protección bloqueante, un check fallido o un conflicto que requiera corrección.
 
+Antes de **cada commit**, el agente debe volver a leer completamente el `AGENTS.md` vigente de la rama de trabajo y verificar que el commit incluye el `CHANGELOG.md`, el versionado y las pruebas requeridas. No puede crear el commit si falta alguno de esos elementos aplicables.
+
 ## Versionado Maven CI-friendly
 
 ```xml

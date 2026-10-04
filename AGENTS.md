@@ -26,6 +26,10 @@ Todo cambio requiere una tarea Jira: identificarla o crearla, pasarla por `Por h
 
 No se puede escribir, commitear ni pushear directamente a `main`.
 
+## Automatización obligatoria del ciclo de entrega
+
+Tras cada cambio, el agente debe completar sin pedir confirmaciones intermedias: commit, push, creación o actualización de la Pull Request, comprobación de los checks del SHA actual, merge automático cuando todos los checks requeridos estén en verde y eliminación de la rama origen. Solo debe detener el merge si GitHub informa de una protección bloqueante, un check fallido o un conflicto que requiera corrección.
+
 ## Versionado Maven CI-friendly
 
 ```xml
